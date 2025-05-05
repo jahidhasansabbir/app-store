@@ -6,19 +6,19 @@ const Navbar = () => {
     <>
       <li>
         <NavLink className={({ isActive }) =>
-          isActive && "bg-gray-300" } to="/apps">Apps</NavLink>
+          isActive ? "bg-gray-300" : '' } to="/apps">Apps</NavLink>
       </li>
       <li>
         <NavLink className={({ isActive }) =>
-          isActive && "bg-gray-300" } to="/my-profile">My Profile</NavLink>
+          isActive ? "bg-gray-300" : ''} to="/my-profile">My Profile</NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar">
+    <div className="navbar px-0">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
+          <div tabIndex={0} role="button" className="btn pl-0 btn-ghost md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

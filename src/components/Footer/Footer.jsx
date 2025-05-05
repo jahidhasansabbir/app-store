@@ -6,13 +6,13 @@ const Footer = () => {
     <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
       <nav className="grid grid-flow-col gap-4">
         <NavLink
-          className={({ isActive }) => isActive && "bg-gray-300 p-2 rounded-sm"}
+          className={({ isActive }) => isActive ? "bg-gray-300 p-2 rounded-sm" : ''}
           to="/apps"
         >
           Apps
         </NavLink>
         <NavLink
-          className={({ isActive }) => isActive && "bg-gray-300 p-2"}
+          className={({ isActive }) => isActive ? "bg-gray-300 p-2 rounded-sm" : ''}
           to="/my-profile"
         >
           My Profile
