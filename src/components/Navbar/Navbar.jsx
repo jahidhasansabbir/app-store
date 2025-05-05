@@ -5,15 +5,17 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/apps">Apps</NavLink>
+        <NavLink className={({ isActive }) =>
+          isActive && "bg-gray-300" } to="/apps">Apps</NavLink>
       </li>
       <li>
-        <NavLink to="/my-profile">My Profile</NavLink>
+        <NavLink className={({ isActive }) =>
+          isActive && "bg-gray-300" } to="/my-profile">My Profile</NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
