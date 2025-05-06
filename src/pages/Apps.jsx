@@ -14,7 +14,7 @@ const Apps = () => {
   const healthApps = apps.filter((app) => app.category == "Health");
   return (
     <>
-      <div className="w-11/12 mx-auto">
+      <div>
         <Slider></Slider>
       </div>
       {/* trending apps */}

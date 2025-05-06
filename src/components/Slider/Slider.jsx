@@ -16,13 +16,13 @@ const Slider = () => {
       slidesPerView={1}
     >
       <SwiperSlide>
-        <img src={slide1} className="w-full h-[300px]" alt="slide 1" />
+        <img src={slide1} className="w-full rounded-2xl h-[160px] md:h-[320px] lg:h-[400px]" alt="slide 1" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={slide2} className="w-full h-[300px]" alt="slide 2" />
+        <img src={slide2} className="w-full rounded-2xl h-[160px] md:h-[320px] lg:h-[400px]" alt="slide 2" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={slide3} className="w-full h-[300px]" alt="slide 3" />
+        <img src={slide3} className="w-full rounded-2xl h-[160px] md:h-[320px] lg:h-[400px]" alt="slide 3" />
       </SwiperSlide>
     </Swiper>
   );
