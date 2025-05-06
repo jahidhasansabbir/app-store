@@ -4,6 +4,7 @@ import MyProfile from "../components/MyProfile/MyProfile";
 import Apps from "../pages/Apps";
 import AppDetails from "../pages/AppDetails";
 import PrivateRoute from "../provider/PrivateRoute";
+import Login from "../pages/Login";
 
 export const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
                 path: 'app-details/:id',
                 element: <PrivateRoute><AppDetails/></PrivateRoute>,
                 loader: ()=>fetch('/appData.json')
+            },
+            {
+                path: 'login',
+                Component: Login
             }
         ]
     }

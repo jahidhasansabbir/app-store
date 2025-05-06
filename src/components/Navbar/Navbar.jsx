@@ -1,6 +1,6 @@
-import React, { use } from "react";
-import { NavLink } from "react-router";
-import { AuthContext } from "../../context/AuthContext";
+import React from "react";
+import { Links, NavLink } from "react-router";
+
 
 const Navbar = () => {
   
@@ -16,12 +16,6 @@ const Navbar = () => {
       </li>
     </>
   );
-  const {googleSignIn}= use(AuthContext)
-  const handleGoogleSignIn = ()=>{
-    googleSignIn()
-    .then(res=>{console.log(res)})
-    .catch(e=>{console.log(e.message)})
-  }
   return (
     <div className="navbar px-0">
       <div className="navbar-start">
@@ -58,7 +52,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a onClick={handleGoogleSignIn} className="btn bg-black text-white">Login</a>
+        <NavLink to='/login' className="btn bg-black text-white">Login</NavLink>
       </div>
     </div>
   );

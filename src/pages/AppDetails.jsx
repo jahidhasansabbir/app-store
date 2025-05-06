@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import Reveiw from "../components/Reveiw/Reveiw";
 
 const AppDetails = () => {
   const { id } = useParams();
   const apps = useLoaderData();
+  const [review, setReview] = useState('')
+  console.log(review);
   const app = apps.find((app) => app.id == id);
   const {
     name,
@@ -59,7 +61,7 @@ const AppDetails = () => {
           ))}
         </ul>
       </div>
-      <div>
+      <div className="mb-6">
         <h2 className="text-xl font-semibold mb-4">User Reviews</h2>
         <div className="space-y-4">
           {reviews.map((review, idx) => (
@@ -76,7 +78,7 @@ const AppDetails = () => {
           ))}
         </div>
       </div>
-          <Reveiw></Reveiw>
+          <Reveiw setReview={setReview}></Reveiw>
     </div>
   );
 };
