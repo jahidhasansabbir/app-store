@@ -1,17 +1,27 @@
-import React from "react";
+import React, { use } from "react";
 import { NavLink } from "react-router";
+import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
-  
+  const {signIn} = use(AuthContext)
+  const handleSignIn=(e)=>{
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    signIn(email, password)
+    .then(() =>{
+    })
+    .catch(error=>console.log(error.message))
+  }
   return (
     <div className="flex justify-center items-center min-h-[70vh] mb-10">
       <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-xl border border-[#8080803c]">
         <div className="card-body">
-          <form className="fieldset">
+          <form onSubmit={handleSignIn} className="fieldset">
             <label className="label">Email</label>
-            <input type="email" className="input" placeholder="Email" />
+            <input type="email" name="email" className="input" placeholder="Email" />
             <label className="label">Password</label>
-            <input type="password" className="input" placeholder="Password" />
+            <input type="password" name="password" className="input" placeholder="Password" />
             <div>
               <a className="link link-hover">Forgot password?</a>
             </div>
