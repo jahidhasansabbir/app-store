@@ -1,0 +1,279 @@
+[
+  {
+    "id": "app001",
+    "name": "Learn English Basics",
+    "developer": "EduTech Ltd.",
+    "thumbnail": "https://i.ibb.co.com/R4VSftpQ/download.png",
+    "banner": "https://i.ibb.co.com/N6P0BTJd/download.png",
+    "downloads": 1200000,
+    "category": "Education",
+    "rating": 4.5,
+    "description": "Learn English Basics helps beginners master essential vocabulary and grammar through engaging lessons and exercises.",
+    "features": [
+      "Grammar practice",
+      "Vocabulary builder",
+      "Quizzes and progress tracking"
+    ],
+    "reviews": [
+      {
+        "user": "english_learner101",
+        "rating": 5,
+        "comment": "This app has made learning English so much easier and fun. I love how it breaks down grammar and provides lots of practice opportunities. Highly recommend for anyone starting out!"
+      }
+    ]
+  },
+  {
+    "id": "app002",
+    "name": "Science for Kids",
+    "developer": "Bright Minds",
+    "thumbnail": "https://i.ibb.co.com/nsKrF7W1/images.jpg",
+    "banner": "https://i.ibb.co.com/dw8XrBYN/download.jpg",
+    "downloads": 800000,
+    "category": "Education",
+    "rating": 4.2,
+    "description": "Fun experiments and colorful animations make science exciting for children aged 5 to 12.",
+    "features": [
+      "Interactive videos",
+      "Kid-friendly quizzes",
+      "Simple experiments at home"
+    ],
+    "reviews": [
+      {
+        "user": "science_mom",
+        "rating": 4,
+        "comment": "Great app for young children. My daughter loves the interactive experiments. It keeps her engaged and curious about science."
+      }
+    ]
+  },
+  {
+    "id": "app003",
+    "name": "Quick Math",
+    "developer": "MathEasy Inc.",
+    "thumbnail": "https://i.ibb.co.com/bjm5kC72/images.jpg",
+    "banner": "https://i.ibb.co.com/5WW370gK/download.jpg",
+    "downloads": 1500000,
+    "category": "Education",
+    "rating": 4.6,
+    "description": "Improve your math skills with daily challenges and problem-solving games.",
+    "features": [
+      "Timed quizzes",
+      "Leaderboard",
+      "Detailed solutions"
+    ],
+    "reviews": [
+      {
+        "user": "math_master",
+        "rating": 5,
+        "comment": "One of the best math apps I’ve used. The daily challenges really help me stay sharp and the explanations are clear."
+      }
+    ]
+  },
+  {
+    "id": "app004",
+    "name": "World History Explorer",
+    "developer": "EduWorld",
+    "thumbnail": "https://i.ibb.co.com/y21yN8T/images.png",
+    "banner": "https://i.ibb.co.com/wNT4yQF4/download.jpg",
+    "downloads": 500000,
+    "category": "Education",
+    "rating": 4.3,
+    "description": "Explore world history from ancient civilizations to modern times in a visually engaging format.",
+    "features": [
+      "Timeline-based learning",
+      "Images and videos",
+      "Topic-based quizzes"
+    ],
+    "reviews": [
+      {
+        "user": "historybuff123",
+        "rating": 4,
+        "comment": "A rich resource for history lovers. I enjoy how the app breaks down eras and makes it easy to understand events with visuals."
+      }
+    ]
+  },
+  {
+    "id": "app005",
+    "name": "FitLife",
+    "developer": "HealthFirst",
+    "thumbnail": "https://i.ibb.co.com/NgtPBVNy/download.jpg",
+    "banner": "https://i.ibb.co.com/gZZJMrqD/download.jpg",
+    "downloads": 2500000,
+    "category": "Health",
+    "rating": 4.7,
+    "description": "Track workouts, set goals, and maintain a healthy lifestyle with FitLife.",
+    "features": [
+      "Fitness tracker",
+      "Daily challenges",
+      "Nutrition advice"
+    ],
+    "reviews": [
+      {
+        "user": "fit_journey",
+        "rating": 5,
+        "comment": "Helped me get in shape with easy-to-follow workouts. The daily reminders and progress tracker keep me motivated."
+      }
+    ]
+  },
+  {
+    "id": "app006",
+    "name": "Daily Yoga",
+    "developer": "ZenApps",
+    "thumbnail": "https://i.ibb.co.com/FkpwY2V4/download.png",
+    "banner": "https://i.ibb.co.com/zHRTmBNW/download.jpg",
+    "downloads": 1300000,
+    "category": "Health",
+    "rating": 4.4,
+    "description": "Start your day right with guided yoga sessions for all skill levels.",
+    "features": [
+      "Video instructions",
+      "Beginner to advanced",
+      "Meditation mode"
+    ],
+    "reviews": [
+      {
+        "user": "calm_soul",
+        "rating": 4,
+        "comment": "I use this app every morning. It's helped reduce my stress and improved my flexibility. A great way to start the day."
+      }
+    ]
+  },
+  {
+    "id": "app007",
+    "name": "Mindful Breathing",
+    "developer": "BreatheWell",
+    "thumbnail": "https://i.ibb.co.com/RTw8P1Hh/download.png",
+    "banner": "https://i.ibb.co.com/39fQLYsk/images.jpg",
+    "downloads": 600000,
+    "category": "Health",
+    "rating": 4.6,
+    "description": "Practice deep breathing exercises to reduce anxiety and improve focus.",
+    "features": [
+      "Guided sessions",
+      "Custom durations",
+      "Progress tracker"
+    ],
+    "reviews": [
+      {
+        "user": "zenmind",
+        "rating": 5,
+        "comment": "A calming experience. The guided breathing sessions have really helped me manage anxiety and sleep better at night."
+      }
+    ]
+  },
+  {
+    "id": "app008",
+    "name": "Healthy Recipes",
+    "developer": "NutriWorld",
+    "thumbnail": "https://i.ibb.co.com/Gfn7VHh3/download.png",
+    "banner": "https://i.ibb.co.com/MkdKycyd/images.jpg",
+    "downloads": 900000,
+    "category": "Health",
+    "rating": 4.5,
+    "description": "Discover nutritious and easy-to-make meals for a healthy lifestyle.",
+    "features": [
+      "Meal planner",
+      "Calorie counter",
+      "Recipe videos"
+    ],
+    "reviews": [
+      {
+        "user": "foodie_fit",
+        "rating": 5,
+        "comment": "Lots of healthy and tasty recipes. Easy to follow and helps with my weekly meal prep. Love the variety!"
+      }
+    ]
+  },
+  {
+    "id": "app009",
+    "name": "Notion",
+    "developer": "Notion Labs, Inc.",
+    "thumbnail": "https://i.ibb.co.com/GvPs5Rdn/download.png",
+    "banner": "https://i.ibb.co.com/d47zr62F/images.png",
+    "downloads": 7000000,
+    "category": "Productivity",
+    "rating": 4.8,
+    "description": "All-in-one workspace to write, plan, collaborate, and stay organized.",
+    "features": [
+      "Notes and docs",
+      "Kanban boards",
+      "Custom templates"
+    ],
+    "reviews": [
+      {
+        "user": "task_master",
+        "rating": 5,
+        "comment": "An incredible app for productivity. I use it for project planning, journaling, and team collaboration. So versatile and powerful!"
+      }
+    ]
+  },
+  {
+    "id": "app010",
+    "name": "Google Keep",
+    "developer": "Google LLC",
+    "thumbnail": "https://i.ibb.co.com/39kDvhxc/download.png",
+    "banner": "https://i.ibb.co.com/LDWY9WmL/images.jpg",
+    "downloads": 5000000,
+    "category": "Productivity",
+    "rating": 4.6,
+    "description": "Capture notes, lists, and reminders quickly and easily.",
+    "features": [
+      "Voice notes",
+      "Color-coded labels",
+      "Google sync"
+    ],
+    "reviews": [
+      {
+        "user": "note_taker",
+        "rating": 4,
+        "comment": "Very simple and efficient. I love how fast I can save notes or reminders. Syncs well with all my devices."
+      }
+    ]
+  },
+  {
+    "id": "app011",
+    "name": "To-Do List",
+    "developer": "ProductiveTech",
+    "thumbnail": "https://i.ibb.co.com/9kBxXBDF/download.jpg",
+    "banner": "https://i.ibb.co.com/Q5Cmj93/download.jpg",
+    "downloads": 2000000,
+    "category": "Productivity",
+    "rating": 4.3,
+    "description": "Stay organized with a simple and effective task manager.",
+    "features": [
+      "Daily planner",
+      "Task reminders",
+      "Dark mode"
+    ],
+    "reviews": [
+      {
+        "user": "daily_planner",
+        "rating": 4,
+        "comment": "Great tool for managing daily tasks. The interface is clean and adding tasks is quick. Would like to see more themes though."
+      }
+    ]
+  },
+  {
+    "id": "app012",
+    "name": "Google Calendar",
+    "developer": "Google LLC",
+    "thumbnail": "https://i.ibb.co.com/r2Y126bB/download.png",
+    "banner": "https://i.ibb.co.com/n8cdtXVZ/images.jpg",
+    "downloads": 10000000,
+    "category": "Productivity",
+    "rating": 4.7,
+    "description": "Plan your day, schedule events, and manage tasks all in one place.",
+    "features": [
+      "Event reminders",
+      "Multiple calendar support",
+      "Gmail integration"
+    ],
+    "reviews": [
+      {
+        "user": "event_pro",
+        "rating": 5,
+        "comment": "Keeps my schedule perfectly organized. I like how it integrates with my email and sends timely notifications."
+      }
+    ]
+  }
+]
+ 

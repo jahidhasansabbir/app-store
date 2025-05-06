@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 import slide1 from "../../assets/image3501.png";
 import slide2 from "../../assets/image3502.png";
 import slide3 from "../../assets/image3503.png";
+
 const Slider = () => {
   return (
     <Swiper
@@ -14,21 +15,15 @@ const Slider = () => {
       spaceBetween={20}
       slidesPerView={1}
     >
-      <div>
-        <SwiperSlide>
-          <img src={slide1} className="w-full h-[300]" />
-        </SwiperSlide>
-      </div>
-      <div>
-        <SwiperSlide>
-          <img src={slide2} className="w-full h-[300]" />
-        </SwiperSlide>
-      </div>
-      <div>
-        <SwiperSlide>
-          <img src={slide3} className="w-full h-[300]" />
-        </SwiperSlide>
-      </div>
+      <SwiperSlide>
+        <img src={slide1} className="w-full h-[300px]" alt="slide 1" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={slide2} className="w-full h-[300px]" alt="slide 2" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={slide3} className="w-full h-[300px]" alt="slide 3" />
+      </SwiperSlide>
     </Swiper>
   );
 };

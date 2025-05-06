@@ -1,7 +1,9 @@
 import { createBrowserRouter } from "react-router";
 import Root from "../layout/Root";
-import Apps from "../components/Apps/Apps";
 import MyProfile from "../components/MyProfile/MyProfile";
+import Apps from "../pages/Apps";
+import AppDetails from "../pages/AppDetails";
+import PrivateRoute from "../provider/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -14,11 +16,17 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'apps',
-                Component: Apps
+                Component: Apps,
+                loader: ()=>fetch('/appData.json')
             },
             {
                 path: 'my-profile',
                 Component: MyProfile
+            },
+            {
+                path: 'app-details/:id',
+                element: <PrivateRoute><AppDetails/></PrivateRoute>,
+                loader: ()=>fetch('/appData.json')
             }
         ]
     }
