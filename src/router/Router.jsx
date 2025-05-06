@@ -5,6 +5,7 @@ import Apps from "../pages/Apps";
 import AppDetails from "../pages/AppDetails";
 import PrivateRoute from "../provider/PrivateRoute";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
             {
                 path: 'login',
                 Component: Login
+            },
+            {
+                path: 'register',
+                Component: Register
             }
         ]
     }

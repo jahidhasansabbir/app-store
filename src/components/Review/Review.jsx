@@ -1,6 +1,6 @@
 import React from "react";
 
-const Reveiw = ({setReview}) => {
+const Review = ({setReview}) => {
   const handleRating = (e) => {
     e.preventDefault();
     const review = e.target.review.value;
@@ -66,4 +66,4 @@ const Reveiw = ({setReview}) => {
   );
 };
 
-export default Reveiw;
+export default Review;

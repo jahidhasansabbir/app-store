@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useLoaderData, useParams } from "react-router";
-import Reveiw from "../components/Reveiw/Reveiw";
+import Review from "../components/Review/Review";
+
 
 const AppDetails = () => {
   const { id } = useParams();
   const apps = useLoaderData();
   const [review, setReview] = useState('')
-  console.log(review);
   const app = apps.find((app) => app.id == id);
   const {
     name,
@@ -52,7 +52,7 @@ const AppDetails = () => {
         </div>
       </div>
       <p className="text-gray-700 mb-6 leading-relaxed">{description}</p>
-
+      <p>{review}</p>
       <div className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Features</h2>
         <ul className="list-disc list-inside space-y-1 text-gray-800">
@@ -78,7 +78,7 @@ const AppDetails = () => {
           ))}
         </div>
       </div>
-          <Reveiw setReview={setReview}></Reveiw>
+          <Review setReview={setReview}></Review>
     </div>
   );
 };
