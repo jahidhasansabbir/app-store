@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { NavLink } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 import { toast } from 'react-toastify';
@@ -6,6 +6,9 @@ import { toast } from 'react-toastify';
 const Register = () => {
   const {signUp, updateUser, googleSignIn} = use(AuthContext)
   const [error, setError] = useState('')
+  useEffect(() => {
+        document.title = "Register | AppStore";
+      }, []);
   const handleRegister = (e)=>{
     e.preventDefault();
     const name=e.target.name.value;

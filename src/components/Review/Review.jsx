@@ -21,13 +21,13 @@ const Review = () => {
         <h1 className="text-xl font-semibold my-3">Your Review</h1>
         <div className=" p-4 rounded-lg shadow-sm border border-gray-200 bg-white">
           <div className="flex justify-between items-start mb-2">
-            <h2 className="font-semibold text-lg">{user.displayName}</h2>
+            <h2 className="font-semibold">{user.displayName}</h2>
             <div className="flex items-center text-yellow-500">
               <FaStar className="w-4 h-4 fill-yellow-500" />
               <span className="ml-1 text-sm font-medium">{rating}</span>
             </div>
           </div>
-          <p className="text-sm text-gray-700">{review}</p>
+          <p className=" text-gray-700">{review}</p>
         </div>
       </div>
       {/* review & rating */}

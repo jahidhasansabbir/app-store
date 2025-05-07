@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router';
 import NotificationCard from '../components/NotificationCard/NotificationCard';
 
 const Notification = () => {
+    useEffect(() => {
+          document.title = "Notifications | AppStore";
+        }, []);
     const notifications = useLoaderData();
     return (
         <div>

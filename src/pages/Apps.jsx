@@ -1,10 +1,13 @@
 import { useLoaderData } from "react-router";
 import Slider from "../components/Slider/Slider";
-import TrendingApps from "../components/ShowApps/ShowApps";
 import ShowApps from "../components/ShowApps/ShowApps";
+import { useEffect } from "react";
 
 const Apps = () => {
   const apps = useLoaderData();
+    useEffect(() => {
+      document.title = "Apps | AppStore";
+    }, []);
   const trendingApps = apps
     .slice()
     .sort((a, b) => b.rating - a.rating)

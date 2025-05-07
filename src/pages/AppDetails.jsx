@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import Review from "../components/Review/Review";
+import { FaStar } from "react-icons/fa";
 
 
 const AppDetails = () => {
   const { id } = useParams();
   const apps = useLoaderData();
   const [review, setReview] = useState('')
+  
   const app = apps.find((app) => app.id == id);
   const {
     name,
@@ -20,7 +22,9 @@ const AppDetails = () => {
     rating,
     category,
   } = app;
-
+  useEffect(() => {
+    document.title = `${name} | AppStore`;
+  }, [name]);
   return (
     <div className="max-w-[1440px] mx-auto p-4">
       {/* Banner Image */}
@@ -71,7 +75,7 @@ const AppDetails = () => {
             >
               <div className="flex justify-between items-center mb-2">
                 <p className="font-semibold">{review.user}</p>
-                <p className="text-yellow-600 text-sm">⭐ {review.rating}</p>
+                <p className="text-yellow-600 text-sm flex justify-center items-center gap-1"><FaStar></FaStar> {review.rating}</p>
               </div>
               <p className="text-gray-700">{review.comment}</p>
             </div>

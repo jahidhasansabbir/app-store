@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { NavLink } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import { toast } from "react-toastify";
@@ -6,6 +6,9 @@ import { toast } from "react-toastify";
 const Login = () => {
   const {signIn, googleSignIn} = use(AuthContext)
   const [error, setError] = useState('')
+  useEffect(() => {
+        document.title = "Login | AppStore";
+      }, []);
   const handleSignIn=(e)=>{
     e.preventDefault();
     const email = e.target.email.value;

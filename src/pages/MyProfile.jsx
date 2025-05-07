@@ -1,10 +1,13 @@
-import React, { use } from "react";
+import React, { use, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { toast } from "react-toastify";
 
 const MyProfile = () => {
   const { user, updateUser } = use(AuthContext);
   const { email, displayName, photoURL } = user;
+  useEffect(() => {
+        document.title = "My Profile | AppStore";
+      }, []);
   const handleUserProfile = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
