@@ -1,19 +1,37 @@
 import React, { use, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { FaStar } from "react-icons/fa";
+import Swal from "sweetalert2";
+import { toast } from "react-toastify";
 
-const Review = () => {
+const Review = ({isActive}) => {
   const { user } = use(AuthContext);
   const [rating, setRating] = useState(null);
   const [review, setReview] = useState("");
   const handleRating = (e) => {
     e.preventDefault();
+   if(isActive){
     const review = e.target.review.value;
     setReview(review);
     e.target.review.value=''
+    if(!rating){
+      toast.warn('Please select a rating!')
+    }
+   }
+   else{
+    console.log('plz install first');
+    Swal.fire({
+      title: 'App Not Installed',
+      text: 'Please install the app first!',
+      icon: 'warning',
+      confirmButtonText: 'OK',
+      confirmButtonColor: '#d33'
+    })
+   }
   };
+  console.log(isActive);
   const handleRatingChange = (e) => {
-    setRating(e.target.value);
+      setRating(e.target.value);
   };
   return (
     <div>
@@ -85,10 +103,10 @@ const Review = () => {
             ></textarea>
           </div>
 
-          <input
+          <input 
             type="submit"
             value="Submit"
-            className="btn bg-black text-white"
+            className={`btn bg-black text-white ${!rating || !review? 'disabled' : ''}`}
           />
         </form>
       </div>

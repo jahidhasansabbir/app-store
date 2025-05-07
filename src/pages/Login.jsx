@@ -2,6 +2,7 @@ import React, { use, useEffect, useState } from "react";
 import { NavLink } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const {signIn, googleSignIn} = use(AuthContext)
@@ -27,7 +28,16 @@ const Login = () => {
           setError('')
           signIn(email, password)
           .then(() =>{
-            toast.success("Login successful")
+            // toast.success("Login successful")
+            Swal.fire({
+              title: 'Welcome!',
+              text: 'You have successfully logged in.',
+              icon: 'success',
+              confirmButtonText: 'Continue',
+              confirmButtonColor: '#4CAF50',
+            });
+            
+            
           })
           .catch(error=>toast.error(error.message))
         }
