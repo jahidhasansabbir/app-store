@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router";
 import Root from "../layout/Root";
-import MyProfile from "../components/MyProfile/MyProfile";
 import Apps from "../pages/Apps";
 import AppDetails from "../pages/AppDetails";
 import PrivateRoute from "../provider/PrivateRoute";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Error404 from "../pages/Error404";
+import MyProfile from "../pages/MyProfile";
 
 export const router = createBrowserRouter([
     {
@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'my-profile',
-                Component: MyProfile
+                element:<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
             },
             {
                 path: 'app-details/:id',

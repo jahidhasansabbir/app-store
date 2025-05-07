@@ -1,5 +1,5 @@
 import React, { use } from "react";
-import { Links, NavLink } from "react-router";
+import { NavLink } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
 
 
@@ -10,6 +10,7 @@ const Navbar = () => {
     .then(()=>{})
     .catch(err=>console.log(err.message))
   }
+console.log(user);
   const links = (
     <>
       <li>
@@ -59,7 +60,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end gap-3">
        {
-        user? <div className="w-10">
+        user? <div title={user.displayName} className="w-10">
         <img
           src={user.photoURL} className="rounded-full" />
       </div>: ''

@@ -5,7 +5,7 @@ import { auth } from '../firebase.init';
 
 const provider = new GoogleAuthProvider();
 const AuthProvider = ({children}) => {
-    const [user, setUser] = useState([])
+    const [user, setUser] = useState(null)
     const googleSignIn = () =>{
         return signInWithPopup(auth, provider)
     }
@@ -18,6 +18,12 @@ const AuthProvider = ({children}) => {
             displayName: userData.name,
             photoURL: userData.photoUrl,
           })
+          .then(() => {
+            return auth.currentUser.reload();
+          })
+          .then(() => {
+            setUser({ ...auth.currentUser });
+          });
     }
 
     const signIn = (email, password)=>{
@@ -34,7 +40,7 @@ const AuthProvider = ({children}) => {
         return ()=>{
             unSubscribe();
         }
-    },[])
+    },[user])
 
     const userInfo = {
         googleSignIn,
@@ -42,7 +48,7 @@ const AuthProvider = ({children}) => {
         updateUser,
         signIn,
         user,
-        logOut
+        logOut,
     }
     return (
         <AuthContext.Provider value={userInfo}>

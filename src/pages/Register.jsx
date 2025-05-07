@@ -4,7 +4,7 @@ import { AuthContext } from '../context/AuthContext';
 import { toast } from 'react-toastify';
 
 const Register = () => {
-  const {signIn, updateUser, googleSignIn} = use(AuthContext)
+  const {signUp, updateUser, googleSignIn} = use(AuthContext)
   const [error, setError] = useState('')
   const handleRegister = (e)=>{
     e.preventDefault();
@@ -24,9 +24,10 @@ const Register = () => {
     }
     else{
       setError(null)
-      signIn(email, password)
+      signUp(email, password)
     .then(()=>{
-      updateUser({ name, photoUrl }).then(()=>{toast.success("Register successful")})
+      updateUser({ name, photoUrl })
+      .then(()=>{toast.success("Registered successfully")})
     })
     .catch(err=>{
       toast.error(err.message)
