@@ -55,7 +55,7 @@ console.log(user);
            {links}
           </ul>
         </div>
-        <NavLink to='/' className="btn btn-ghost text-xl md:text-2xl pl-0"><span className="">App</span><span className="-ml-1.5 text-blue-600">Store</span></NavLink>
+        <NavLink to='/' className="btn btn-ghost text-xl md:text-2xl pl-0"><span className="">App</span><span className="-ml-1.5 text-blue-400">Store</span></NavLink>
       </div>
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1">
