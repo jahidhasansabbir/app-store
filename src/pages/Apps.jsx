@@ -20,7 +20,7 @@ const Apps = () => {
       {/* trending apps */}
       <div className="my-6 md:my-16 space-y-4">
         <h1 className="text-lg md:text-4xl font-bold ">Trending Apps</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 bg-gray-100 rounded-xl">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 bg-gray-100 rounded-xl">
           {trendingApps.map((app) => (
             <ShowApps key={app.id} app={app}></ShowApps>
           ))}
@@ -29,7 +29,7 @@ const Apps = () => {
       {/* Educational apps */}
       <div className="my-6 md:my-16 space-y-4">
         <h1 className="text-lg md:text-4xl font-bold ">Educational Apps</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 bg-gray-100 rounded-xl">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 bg-gray-100 rounded-xl">
           {educationalApps.map((app) => (
             <ShowApps key={app.id} app={app}></ShowApps>
           ))}
@@ -38,7 +38,7 @@ const Apps = () => {
       {/* Health apps */}
       <div className="my-6 md:my-16 space-y-4">
         <h1 className="text-lg md:text-4xl font-bold ">Health Apps</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 bg-gray-100 rounded-xl">
+        <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 p-4 bg-gray-100 rounded-xl">
           {healthApps.map((app) => (
             <ShowApps key={app.id} app={app}></ShowApps>
           ))}
@@ -47,7 +47,7 @@ const Apps = () => {
       {/* Productivity apps */}
       <div className="my-6 md:my-16 space-y-4">
         <h1 className="text-lg md:text-4xl font-bold ">Productivity Apps</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 bg-gray-100 rounded-xl">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 bg-gray-100 rounded-xl">
           {productivityApps.map((app) => (
             <ShowApps key={app.id} app={app}></ShowApps>
           ))}

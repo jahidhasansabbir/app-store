@@ -9,7 +9,6 @@ const AuthProvider = ({children}) => {
     const googleSignIn = () =>{
         return signInWithPopup(auth, provider)
     }
-    console.log(user);
     const signUp = (email, password)=>{
         return createUserWithEmailAndPassword(auth, email, password)
     }

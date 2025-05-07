@@ -1,22 +1,36 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { NavLink } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 
 const Register = () => {
   const {signIn, updateUser, googleSignIn} = use(AuthContext)
+  const [error, setError] = useState('')
   const handleRegister = (e)=>{
     e.preventDefault();
     const name=e.target.name.value;
     const email=e.target.email.value;
     const photoUrl=e.target.photoUrl.value;
     const password=e.target.password.value;
-    signIn(email, password)
+    
+    if (!(/[A-Z]/.test(password))) {
+      return setError('Password must contain at least one uppercase letter.')
+    }
+    else if (!(/[a-z]/.test(password))) {
+      return setError('Password must contain at least one lowercase letter.') 
+    }
+    else if ((password.length < 6)) {
+      return  setError('Password must be at least 6 characters long.') 
+    }
+    else{
+      setError(null)
+      signIn(email, password)
     .then(()=>{
       updateUser({ name, photoUrl }).then(()=>{console.log('profile updated')})
     })
     .catch(err=>{
       console.log(err.message);
     })
+    }
   }
   const handleGoogleSignIn = ()=>{
     googleSignIn()
@@ -42,6 +56,7 @@ const Register = () => {
             <input required type="password" 
             name='password'
             className="input" placeholder="Password" />
+            <p className='text-red-500'>{error}</p>
             <div>
             </div>
             <button className="btn btn-neutral mt-4">Sign up</button>

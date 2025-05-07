@@ -1,17 +1,31 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { NavLink } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
   const {signIn, googleSignIn} = use(AuthContext)
+  const [error, setError] = useState('')
   const handleSignIn=(e)=>{
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    signIn(email, password)
-    .then(() =>{
-    })
-    .catch(error=>console.log(error.message))
+        if (! /[A-Z]/.test(password)) {
+          return setError('Password must contain at least one uppercase letter.')
+        }
+        if (!/[a-z]/.test(password)) {
+          return setError('Password must contain at least one lowercase letter.') 
+        }
+        if (password.length < 6) {
+
+          return  setError('Password must be at least 6 characters long.') 
+        }
+        else{
+          setError('')
+          signIn(email, password)
+          .then(() =>{
+          })
+          .catch(error=>console.log(error.message))
+        }
   }
   const handleGoogleSignIn = ()=>{
     googleSignIn()
@@ -24,11 +38,12 @@ const Login = () => {
         <div className="card-body">
           <form onSubmit={handleSignIn} className="fieldset">
             <label className="label">Email</label>
-            <input type="email" name="email" className="input" placeholder="Email" />
+            <input required type="email" name="email" className="input" placeholder="Email" />
             <label className="label">Password</label>
-            <input type="password" name="password" className="input" placeholder="Password" />
+            <input type="password" required name="password" className="input" placeholder="Password" />
             <div>
-              <a className="link link-hover">Forgot password?</a>
+              {error?<p className='text-red-500'>{error}</p>:<a className="link link-hover">Forgot password?</a>}
+              
             </div>
             <button className="btn btn-neutral mt-4">Login</button>
           </form>
