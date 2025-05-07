@@ -15,7 +15,6 @@ const Footer = () => {
           clipRule="evenodd"
           className="fill-current"
         >
-          <path d="M22.672 15.226l-2.432.811...z"></path>
         </svg>
         <p>
            <NavLink to='/' className="btn btn-ghost text-xl md:text-2xl pl-0"><span className="">App</span><span className="-ml-1.5 text-blue-400">Store</span></NavLink>

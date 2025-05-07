@@ -1,13 +1,19 @@
 import { useLoaderData } from "react-router";
 import Slider from "../components/Slider/Slider";
 import ShowApps from "../components/ShowApps/ShowApps";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Testomonials from "../components/Testomonials/Testomonials";
 
 const Apps = () => {
   const apps = useLoaderData();
-    useEffect(() => {
-      document.title = "Apps | AppStore";
-    }, []);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    document.title = "Apps | AppStore";
+    fetch("testimonials.json")
+      .then((res) => res.json())
+      .then((d) => setData(d));
+  }, []);
+  console.log(data);
   const trendingApps = apps
     .slice()
     .sort((a, b) => b.rating - a.rating)
@@ -53,6 +59,15 @@ const Apps = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 bg-gray-100 rounded-xl">
           {productivityApps.map((app) => (
             <ShowApps key={app.id} app={app}></ShowApps>
+          ))}
+        </div>
+      </div>
+      {/* testimonials */}
+      <div className="my-6 md:my-16 space-y-4">
+        <h1 className="text-lg md:text-4xl font-bold ">Testimonials</h1>
+        <div className=" space-y-4 ">
+          {data.map((t) => (
+            <Testomonials key={t.id} t={t}></Testomonials>
           ))}
         </div>
       </div>

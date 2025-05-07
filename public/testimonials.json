@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "name": "Anika Rahman",
+      "review": "This app store is a game changer! Smooth experience and great collection.",
+      "rating": 5,
+      "photo": "https://i.pravatar.cc/100?img=1"
+    },
+    {
+      "id": 2,
+      "name": "Tanvir Hasan",
+      "review": "Found some amazing productivity tools here. Highly recommended!",
+      "rating": 4,
+      "photo": "https://i.pravatar.cc/100?img=2"
+    },
+    {
+      "id": 3,
+      "name": "Rifat Karim",
+      "review": "UI is clean and apps are well categorized. Love the health section!",
+      "rating": 5,
+      "photo": "https://i.pravatar.cc/100?img=3"
+    }
+  ]
+  

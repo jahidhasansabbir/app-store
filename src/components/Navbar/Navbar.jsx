@@ -10,7 +10,6 @@ const Navbar = () => {
     .then(()=>{})
     .catch(err=>console.log(err.message))
   }
-console.log(user);
   const links = (
     <>
       <li>
