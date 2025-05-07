@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
-  const {signIn} = use(AuthContext)
+  const {signIn, googleSignIn} = use(AuthContext)
   const handleSignIn=(e)=>{
     e.preventDefault();
     const email = e.target.email.value;
@@ -11,6 +11,11 @@ const Login = () => {
     signIn(email, password)
     .then(() =>{
     })
+    .catch(error=>console.log(error.message))
+  }
+  const handleGoogleSignIn = ()=>{
+    googleSignIn()
+    .then(()=>{})
     .catch(error=>console.log(error.message))
   }
   return (
@@ -34,7 +39,7 @@ const Login = () => {
             </NavLink>
           </p>
           <p className="text-center text-gray-400 text-lg">Or,</p>
-          <button className="btn bg-white text-black border-[#e5e5e5]">
+          <button onClick={handleGoogleSignIn} className="btn bg-white text-black border-[#e5e5e5]">
             <svg
               aria-label="Google logo"
               width="16"

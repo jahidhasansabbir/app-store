@@ -3,7 +3,7 @@ import { NavLink } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 
 const Register = () => {
-  const {signIn, updateUser} = use(AuthContext)
+  const {signIn, updateUser, googleSignIn} = use(AuthContext)
   const handleRegister = (e)=>{
     e.preventDefault();
     const name=e.target.name.value;
@@ -17,9 +17,13 @@ const Register = () => {
     .catch(err=>{
       console.log(err.message);
     })
-    
-    
   }
+  const handleGoogleSignIn = ()=>{
+    googleSignIn()
+    .then(()=>{})
+    .catch(error=>console.log(error.message))
+  }
+  
     return (
         <div className="flex justify-center items-center min-h-[70vh] mb-10">
       <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-xl border border-[#8080803c]">
@@ -49,7 +53,7 @@ const Register = () => {
             </NavLink>
           </p>
           <p className="text-center text-gray-400 text-lg">Or,</p>
-          <button className="btn bg-white text-black border-[#e5e5e5]">
+          <button onClick={handleGoogleSignIn} className="btn bg-white text-black border-[#e5e5e5]">
             <svg
               aria-label="Google logo"
               width="16"
