@@ -10,6 +10,7 @@ const Review = () => {
     e.preventDefault();
     const review = e.target.review.value;
     setReview(review);
+    e.target.review.value=''
   };
   const handleRatingChange = (e) => {
     setRating(e.target.value);

@@ -15,11 +15,15 @@ console.log(user);
     <>
       <li>
         <NavLink className={({ isActive }) =>
-          isActive ? "bg-gray-300" : '' } to="/">Apps</NavLink>
+          isActive ? "border-b-2" : '' } to="/">Apps</NavLink>
       </li>
       <li>
         <NavLink className={({ isActive }) =>
-          isActive ? "bg-gray-300" : ''} to="/my-profile">My Profile</NavLink>
+          isActive ? "border-b-2" : ''} to="/my-profile">My Profile</NavLink>
+      </li>
+      <li>
+        <NavLink className={({ isActive }) =>
+          isActive ? "border-b-2" : ''} to="/notification">Notification</NavLink>
       </li>
     </>
   );
@@ -51,7 +55,7 @@ console.log(user);
            {links}
           </ul>
         </div>
-        <NavLink to='/' className="btn btn-ghost text-xl">AppStore</NavLink>
+        <NavLink to='/' className="btn btn-ghost text-xl md:text-2xl pl-0"><span className="">App</span><span className="-ml-1.5 text-blue-600">Store</span></NavLink>
       </div>
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1">

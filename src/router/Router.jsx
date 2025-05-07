@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Error404 from "../pages/Error404";
 import MyProfile from "../pages/MyProfile";
+import Notification from "../pages/Notification";
 
 export const router = createBrowserRouter([
     {
@@ -36,6 +37,11 @@ export const router = createBrowserRouter([
             {
                 path: 'register',
                 Component: Register
+            },
+            {
+                path: 'notification',
+                element:<PrivateRoute><Notification></Notification></PrivateRoute>,
+                loader: ()=>fetch('notification.json')
             }
         ]
     }

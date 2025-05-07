@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "type": "new_release",
+      "title": "New App Released!",
+      "message": "Try the brand-new productivity tool 'FocusFlow' now available in the store.",
+      "timestamp": "2025-05-08T10:00:00Z",
+      "read": false
+    },
+    {
+      "id": 2,
+      "type": "app_update",
+      "title": "App Update Available",
+      "message": "'TaskMaster' has released version 2.3 with new calendar integration.",
+      "timestamp": "2025-05-07T14:30:00Z",
+      "read": false
+    },
+    {
+      "id": 3,
+      "type": "deal",
+      "title": "Limited Time Offer!",
+      "message": "'NoteSync Pro' is 40% off until May 10. Don't miss out!",
+      "timestamp": "2025-05-06T18:45:00Z",
+      "read": true
+    },
+    {
+      "id": 4,
+      "type": "rating_request",
+      "title": "Rate Your Experience",
+      "message": "You recently installed 'MindRelax'. Share your feedback to help others.",
+      "timestamp": "2025-05-05T09:15:00Z",
+      "read": false
+    },
+    {
+      "id": 5,
+      "type": "featured",
+      "title": "Featured App of the Week",
+      "message": "'HabitTracker+' is now featured for its amazing user reviews and design.",
+      "timestamp": "2025-05-04T11:00:00Z",
+      "read": true
+    },
+    {
+      "id": 6,
+      "type": "system",
+      "title": "System Maintenance",
+      "message": "App Store services will be down for maintenance on May 9, 2:00 AM – 3:00 AM UTC.",
+      "timestamp": "2025-05-03T22:00:00Z",
+      "read": false
+    }
+  ]
+  
