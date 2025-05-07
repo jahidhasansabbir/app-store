@@ -6,14 +6,17 @@ import AppDetails from "../pages/AppDetails";
 import PrivateRoute from "../provider/PrivateRoute";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Error404 from "../pages/Error404";
 
 export const router = createBrowserRouter([
     {
         path: '/',
         Component: Root,
+        errorElement: <Error404></Error404>,
         children: [
             {
-                path: 'apps',
+
+                index:true,
                 Component: Apps,
                 loader: ()=>fetch('/appData.json')
             },

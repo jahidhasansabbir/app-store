@@ -1,6 +1,7 @@
 import React, { use, useState } from "react";
 import { NavLink } from "react-router";
 import { AuthContext } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const {signIn, googleSignIn} = use(AuthContext)
@@ -23,14 +24,17 @@ const Login = () => {
           setError('')
           signIn(email, password)
           .then(() =>{
+            toast.success("Login successful")
           })
-          .catch(error=>console.log(error.message))
+          .catch(error=>toast.error(error.message))
         }
   }
   const handleGoogleSignIn = ()=>{
     googleSignIn()
-    .then(()=>{})
-    .catch(error=>console.log(error.message))
+    .then(()=>{
+      toast.success("Login successful")
+    })
+    .catch(error=>toast.error(error.message))
   }
   return (
     <div className="flex justify-center items-center min-h-[70vh] mb-10">
@@ -49,7 +53,7 @@ const Login = () => {
           </form>
           <p className="text-gray-400">
           Don't have an account?{" "}
-            <NavLink to='/register' className="text-blue-500 underline">
+            <NavLink to='/register' className="text-blue-500 hover:underline">
               Register
             </NavLink>
           </p>

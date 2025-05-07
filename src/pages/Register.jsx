@@ -1,6 +1,7 @@
 import React, { use, useState } from 'react';
 import { NavLink } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const {signIn, updateUser, googleSignIn} = use(AuthContext)
@@ -25,17 +26,17 @@ const Register = () => {
       setError(null)
       signIn(email, password)
     .then(()=>{
-      updateUser({ name, photoUrl }).then(()=>{console.log('profile updated')})
+      updateUser({ name, photoUrl }).then(()=>{toast.success("Register successful")})
     })
     .catch(err=>{
-      console.log(err.message);
+      toast.error(err.message)
     })
     }
   }
   const handleGoogleSignIn = ()=>{
     googleSignIn()
-    .then(()=>{})
-    .catch(error=>console.log(error.message))
+    .then(()=>{toast.success("Login successful")})
+    .catch(error=>toast.error(error.message))
   }
   
     return (
@@ -63,7 +64,7 @@ const Register = () => {
           </form>
           <p className="text-gray-400">
           Already have an account?{" "}
-            <NavLink to='/login' className="text-blue-500 underline">
+            <NavLink to='/login' className="text-blue-500 hover:underline">
               Log in
             </NavLink>
           </p>
