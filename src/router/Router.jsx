@@ -8,6 +8,7 @@ import Register from "../pages/Register";
 import Error404 from "../pages/Error404";
 import MyProfile from "../pages/MyProfile";
 import Notification from "../pages/Notification";
+import Loading from "../components/Loading/Loading";
 
 export const router = createBrowserRouter([
     {
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
 
                 index:true,
                 Component: Apps,
+                hydrateFallbackElement:<Loading/>,
                 loader: ()=>fetch('/appData.json')
             },
             {
@@ -27,6 +29,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'app-details/:id',
+                hydrateFallbackElement:<Loading/>,
                 element: <PrivateRoute><AppDetails/></PrivateRoute>,
                 loader: ()=>fetch('/appData.json')
             },
@@ -40,9 +43,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'notification',
+                hydrateFallbackElement:<Loading/>,
                 element:<PrivateRoute><Notification></Notification></PrivateRoute>,
                 loader: ()=>fetch('notification.json')
             }
+            
         ]
     }
 ])

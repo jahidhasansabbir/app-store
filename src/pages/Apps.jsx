@@ -13,7 +13,6 @@ const Apps = () => {
       .then((res) => res.json())
       .then((d) => setData(d));
   }, []);
-  console.log(data);
   const trendingApps = apps
     .slice()
     .sort((a, b) => b.rating - a.rating)
