@@ -1,11 +1,13 @@
 import React, { use, useEffect, useState } from 'react';
-import { NavLink } from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
 
 const Register = () => {
   const {signUp, updateUser, googleSignIn} = use(AuthContext)
   const [error, setError] = useState('')
+  const navigate = useNavigate();
   useEffect(() => {
         document.title = "Register | AppStore";
       }, []);
@@ -30,7 +32,16 @@ const Register = () => {
       signUp(email, password)
     .then(()=>{
       updateUser({ name, photoUrl })
-      .then(()=>{toast.success("Registered successfully")})
+      .then(()=>{ 
+        navigate(location?.state || '/')
+        Swal.fire({
+                    title: 'Welcome!',
+                    text: 'You have registered successfully.',
+                    icon: 'success',
+                    confirmButtonText: 'Continue',
+                    confirmButtonColor: '#4CAF50',
+                  });
+      })
     })
     .catch(err=>{
       toast.error(err.message)
@@ -39,7 +50,15 @@ const Register = () => {
   }
   const handleGoogleSignIn = ()=>{
     googleSignIn()
-    .then(()=>{toast.success("Login successful")})
+    .then(()=>{
+      navigate(location?.state || '/')
+      Swal.fire({
+                    title: 'Welcome!',
+                    text: 'You have successfully Registered.',
+                    icon: 'success',
+                    confirmButtonText: 'Continue',
+                    confirmButtonColor: '#4CAF50',
+                  });})
     .catch(error=>toast.error(error.message))
   }
   

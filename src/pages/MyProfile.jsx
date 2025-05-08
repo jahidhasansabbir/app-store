@@ -25,12 +25,12 @@ const MyProfile = () => {
   return (
     <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md md:my-8  text-center">
       <img
-        src={photoURL || "https://i.ibb.co/2kR2B94/default-user.png"}
+        src={photoURL}
         alt="User Avatar"
         className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
       />
 
-      <h2 className="text-xl font-semibold">{displayName || "Anonymous"}</h2>
+      <h2 className="text-xl font-semibold">{displayName}</h2>
       <p className="text-gray-600">{email}</p>
       <div className="break-words mt-2">
         {" "}

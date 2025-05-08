@@ -31,7 +31,6 @@ const Login = () => {
           signIn(email, password)
           .then(() =>{
             navigate(location?.state || '/')
-            // toast.success("Login successful")
             Swal.fire({
               title: 'Welcome!',
               text: 'You have successfully logged in.',
@@ -42,13 +41,28 @@ const Login = () => {
             
             
           })
-          .catch(error=>toast.error(error.message))
+          .catch((err)=>{
+            Swal.fire({
+              title: 'Error',
+              text: `${err.message}`,
+              icon: 'warning',
+              confirmButtonText: 'Continue',
+              confirmButtonColor: 'red',
+            });
+          })
         }
   }
   const handleGoogleSignIn = ()=>{
     googleSignIn()
     .then(()=>{
-      toast.success("Login successful")
+      navigate(location?.state || '/')
+      Swal.fire({
+        title: 'Welcome!',
+        text: 'You have successfully logged in.',
+        icon: 'success',
+        confirmButtonText: 'Continue',
+        confirmButtonColor: '#4CAF50',
+      });
     })
     .catch(error=>toast.error(error.message))
   }
@@ -62,7 +76,7 @@ const Login = () => {
             <label className="label">Password</label>
             <input type="password" required name="password" className="input" placeholder="Password" />
             <div>
-              {error?<p className='text-red-500'>{error}</p>:<a className="link link-hover">Forgot password?</a>}
+              {error?<p className='text-red-500'>{error}</p>:<NavLink to="/forget-password" className="link link-hover">Forgot password?</NavLink>}
               
             </div>
             <button className="btn btn-neutral mt-4">Login</button>

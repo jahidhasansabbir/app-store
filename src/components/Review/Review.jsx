@@ -10,23 +10,25 @@ const Review = ({isActive}) => {
   const [review, setReview] = useState("");
   const handleRating = (e) => {
     e.preventDefault();
-    if(!rating){
-      toast.warn('Please select a rating!')
-    }
+    
    if(isActive && rating){
     const review = e.target.review.value;
     setReview(review);
     e.target.review.value=''
   }
    else{
-    console.log('plz install first');
-    Swal.fire({
-      title: 'App Not Installed',
-      text: 'Please install the app first!',
-      icon: 'warning',
-      confirmButtonText: 'OK',
-      confirmButtonColor: '#d33'
-    })
+     if(!isActive){
+      Swal.fire({
+        title: 'App Not Installed',
+        text: 'Please install the app first!',
+        icon: 'warning',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#d33'
+      })
+     }
+     else if(!rating){
+      toast.error("Please select star first")
+     }
    }
   };
   console.log(isActive);

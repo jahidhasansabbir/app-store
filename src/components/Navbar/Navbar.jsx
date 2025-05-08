@@ -20,10 +20,10 @@ const Navbar = () => {
         <NavLink className={({ isActive }) =>
           isActive ? "border-b-2" : ''} to="/my-profile">My Profile</NavLink>
       </li>
-      <li>
+      {user && <li>
         <NavLink className={({ isActive }) =>
           isActive ? "border-b-2" : ''} to="/notification">Notification</NavLink>
-      </li>
+      </li>}
     </>
   );
   return (

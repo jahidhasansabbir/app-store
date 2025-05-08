@@ -9,6 +9,7 @@ import Error404 from "../pages/Error404";
 import MyProfile from "../pages/MyProfile";
 import Notification from "../pages/Notification";
 import Loading from "../components/Loading/Loading";
+import ForgetPassword from "../components/ForgetPassword/ForgetPassword";
 
 export const router = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
                 hydrateFallbackElement:<Loading/>,
                 element:<PrivateRoute><Notification></Notification></PrivateRoute>,
                 loader: ()=>fetch('notification.json')
+            },
+            {
+                path: 'forget-password',
+                element:<ForgetPassword></ForgetPassword>
             }
             
         ]
