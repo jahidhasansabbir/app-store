@@ -1,5 +1,5 @@
 import React, { use, useEffect, useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
@@ -7,6 +7,8 @@ import Swal from "sweetalert2";
 const Login = () => {
   const {signIn, googleSignIn} = use(AuthContext)
   const [error, setError] = useState('')
+  const navigate = useNavigate();
+  const location = useLocation()
   useEffect(() => {
         document.title = "Login | AppStore";
       }, []);
@@ -28,6 +30,7 @@ const Login = () => {
           setError('')
           signIn(email, password)
           .then(() =>{
+            navigate(location?.state || '/')
             // toast.success("Login successful")
             Swal.fire({
               title: 'Welcome!',

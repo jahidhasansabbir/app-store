@@ -63,7 +63,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end gap-3">
        {
-        user? <div title={user.displayName} className="w-10">
+        user? <div title={user.displayName} className='w-10'>
         <img
           src={user.photoURL} className="rounded-full" />
       </div>: ''

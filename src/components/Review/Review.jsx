@@ -10,14 +10,14 @@ const Review = ({isActive}) => {
   const [review, setReview] = useState("");
   const handleRating = (e) => {
     e.preventDefault();
-   if(isActive){
-    const review = e.target.review.value;
-    setReview(review);
-    e.target.review.value=''
     if(!rating){
       toast.warn('Please select a rating!')
     }
-   }
+   if(isActive && rating){
+    const review = e.target.review.value;
+    setReview(review);
+    e.target.review.value=''
+  }
    else{
     console.log('plz install first');
     Swal.fire({
@@ -54,7 +54,7 @@ const Review = ({isActive}) => {
         <p className="text-gray-500">Tell other what you think</p>
         <form onSubmit={handleRating} className="space-y-4">
           <div className="flex mt-4">
-            <div className="rating gap-4" onClick={handleRatingChange}>
+            <div className="rating gap-4" required onClick={handleRatingChange}>
               <input
                 type="radio"
                 name="rating-1"
