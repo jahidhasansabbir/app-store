@@ -17,7 +17,7 @@ The purpose of this project is to build a user-centric AppStore platform where u
 
 ## 🌐 Live Site
 
-👉 [Live URL](https://appstore-1529c.web.app/)
+ [Live URL](https://appstore-1529c.web.app/)
 
 ---
 
@@ -112,3 +112,54 @@ The purpose of this project is to build a user-centric AppStore platform where u
 ## 🔐 Firebase & Env Setup
 
 - Firebase credentials are stored in `.env.local`:
+
+
+## 🧰 Installation & Setup Guide
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/jahidhasansabbir/app-store.git
+cd app-store
+```
+
+### 2. Install Dependencies
+
+Make sure you have Node.js installed, then run:
+
+```bash
+npm install
+```
+
+### 3. Create `.env.local` File
+
+At the root of your project, create a `.env.local` file and add the following Firebase environment variables:
+
+```env
+VITE_apiKey=your_api_key
+VITE_authDomain=your_auth_domain
+VITE_projectId=your_project_id
+VITE_storageBucket=your_storage_bucket
+VITE_messagingSenderId=your_messaging_sender_id
+VITE_appId=your_app_id
+```
+
+> ⚠️ **Important:** Do not commit `.env.local` to version control. Make sure it is listed in your `.gitignore` file.
+
+### 4. Run the Application Locally
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Then open your browser and visit:
+
+[http://localhost:5173](http://localhost:5173)  
+(or the port provided in your terminal)
+
+---
+
+
+Thank you for visiting! 🎉
