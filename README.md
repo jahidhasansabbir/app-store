@@ -113,6 +113,26 @@ The purpose of this project is to build a user-centric AppStore platform where u
 
 - Firebase credentials are stored in `.env.local`:
 
+---
+
+## 📦 Dependencies
+
+| Package                         | Version     | Description                                              |
+|----------------------------------|-------------|----------------------------------------------------------|
+| `@tailwindcss/vite`             | ^4.1.5      | Vite plugin for Tailwind CSS                             |
+| `firebase`                      | ^11.6.1     | Firebase SDK for authentication and backend services     |
+| `react`                         | ^19.1.0     | Core React library                                       |
+| `react-dom`                     | ^19.1.0     | Entry point to the DOM for React                         |
+| `react-icons`                   | ^5.5.0      | Popular icon packs as React components                   |
+| `react-rating`                 | ^2.0.5      | Simple star rating UI component                         |
+| `react-router`                  | ^7.5.3      | Declarative routing for React apps                       |
+| `react-simple-star-rating`      | ^5.1.7      | Lightweight star rating component                        |
+| `react-toastify`                | ^11.0.5     | Toast notifications for success/error handling           |
+| `sweetalert2`                   | ^11.21.0    | Modern pop-up modals and alerts                          |
+| `swiper`                        | ^11.2.6     | Mobile-friendly slider component                         |
+| `tailwindcss`                   | ^4.1.5      | Utility-first CSS framework                              |
+
+---
 
 ## 🧰 Installation & Setup Guide
 
